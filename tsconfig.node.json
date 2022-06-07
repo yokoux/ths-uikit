@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "esnext",
+    "declaration": true,
+    "declarationDir": "types",
+    "moduleResolution": "node"
+  },
+  "include": ["vite.config.ts"],
+  "exclude": [
+    "lib/**/*.test.tsx",
+    "lib/**/*.stories.tsx",
+    "lib/**/*.stories.mdx",
+    "lib/setupTests.tsx",
+  ]
+}

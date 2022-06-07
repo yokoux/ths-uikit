@@ -1,0 +1,54 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Container, Aside, Header, Main, Footer } from ".";
+import { Palette } from "@/theme";
+import { ThemeProvider } from "@emotion/react";
+import { defaultTheme } from "@/theme";
+
+<Meta title="LitheUI/Container" />
+
+export const Template = (args) => (
+  <ThemeProvider theme={defaultTheme}>
+    <Container horizontal>
+      <Aside
+        width="400px"
+        sx={{
+          backgroundColor: Palette.redLight,
+        }}
+      >
+        Aside
+      </Aside>
+      <Container>
+        <Header
+          sx={{
+            backgroundColor: Palette.orangeLight,
+          }}
+        >
+          Header
+        </Header>
+        <Main
+          sx={{
+            backgroundColor: Palette.oliveLight,
+          }}
+        >
+          Main
+        </Main>
+        <Footer
+          sx={{
+            backgroundColor: Palette.purpleLight,
+          }}
+        >
+          Footer
+        </Footer>
+      </Container>
+    </Container>
+  </ThemeProvider>
+);
+
+## Container
+
+<Canvas>
+  <Story name="Container" args={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
